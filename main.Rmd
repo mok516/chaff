@@ -66,6 +66,16 @@ chaff_summary <- chaff2 %>%
             se = sd/sqrt(n))
 chaff_summary
 ```
+<!-- make into a function -->
+```{r function}
+chaff_summary <- function(summarise) {{chaff2 %>%
+  group_by(sex) %>%
+  summarise(mean_index = mean(mass),
+            n = length (mass),
+            sd = sd(mass),
+            se = sd/sqrt(n))}
+  }
+```
 
 
 
@@ -75,3 +85,4 @@ Summary of data shows a **mean** of **20.48** for **females** and **22.28** for 
 For females the results were, a *Standard deviation* of **2.14** and a *Standard error* of **0.478**.
 
 #### Discussion 
+**Male** chaffinches appear to be *heavier* than **Females** from this data, having a *higher* mean **mass** (by ~**1.06 grams**). Despite having *slightly higher* standard deviations and standard errors the results are conclusive.
