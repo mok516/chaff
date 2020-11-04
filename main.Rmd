@@ -22,7 +22,23 @@ library(tidyverse)
 Working with the **chaff** data set, this data records the masses of male and female chaffinches.  
 ## Methods
 Use R analysis to calculate the **sum of squares** from the **mass** values 
+
+```{r data}
+# read in chaff data
+chaff <- read.table("raw_data/chaff.txt", header = TRUE)
+str(chaff)
+
+# tidy chaff data
+chaff2 <- pivot_longer(data = chaff, cols = everything(),
+                       names_to = "sex", values_to = "mass")
+str(chaff2)
+file <-  "../workshop1-58Mworking/chaff2.txt"
+# save to file 
+write.table(chaff2, 
+            file, 
+            quote = FALSE,
+            row.names = FALSE)
+```
 ### Results 
 The difference in masses between sex 
-
 #### Discussion 
