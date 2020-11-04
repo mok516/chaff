@@ -379,7 +379,36 @@ summary {
 </div>
 
 
-
+<!-- Setup, FALSE for these 3 so code doesn't show up in document -->
+<!-- package loading -->
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Working with the <strong>chaff</strong> data set, this data records the masses of male and female chaffinches.</p>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<p>Use R analysis to calculate the <strong>sum of squares</strong> from the <strong>mass</strong> values.</p>
+<pre><code>## &#39;data.frame&#39;:    20 obs. of  2 variables:
+##  $ females: num  18.3 22.1 22.4 18.5 22.2 19.3 17.8 20.2 22.1 16.6 ...
+##  $ males  : num  22.7 20.6 25.4 20.4 21.6 17 26.4 20.4 24.7 21.8 ...</code></pre>
+<pre><code>## tibble [40 x 2] (S3: tbl_df/tbl/data.frame)
+##  $ sex : chr [1:40] &quot;females&quot; &quot;males&quot; &quot;females&quot; &quot;males&quot; ...
+##  $ mass: num [1:40] 18.3 22.7 22.1 20.6 22.4 25.4 18.5 20.4 22.2 21.6 ...</code></pre>
+<!-- code chunk for SS(x) -->
+<pre><code>## # A tibble: 1 x 1
+##      ss
+##   &lt;dbl&gt;
+## 1  207.</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   sex        ss
+##   &lt;chr&gt;   &lt;dbl&gt;
+## 1 females  86.8
+## 2 males    87.9</code></pre>
+<div id="results" class="section level3">
+<h3>Results</h3>
+<p>The difference in masses between sex. The <em>SS(x)</em> values for <strong>females</strong> is <strong>86.8320</strong>, whilst for <strong>males</strong> it is <strong>87.8975</strong>. #### Discussion</p>
+</div>
+</div>
+</div>
 
 
 

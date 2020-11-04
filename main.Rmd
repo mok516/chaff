@@ -20,8 +20,9 @@ library(tidyverse)
 
 # Introduction 
 Working with the **chaff** data set, this data records the masses of male and female chaffinches.  
+
 ## Methods
-Use R analysis to calculate the **sum of squares** from the **mass** values 
+Use R analysis to calculate the **sum of squares** from the **mass** values. 
 
 ```{r data}
 # read in chaff data
@@ -32,13 +33,31 @@ str(chaff)
 chaff2 <- pivot_longer(data = chaff, cols = everything(),
                        names_to = "sex", values_to = "mass")
 str(chaff2)
-file <-  "../workshop1-58Mworking/chaff2.txt"
+file <-  "../chaff/chaff2.txt"
 # save to file 
 write.table(chaff2, 
             file, 
             quote = FALSE,
             row.names = FALSE)
 ```
+<!-- code chunk for SS(x) -->
+```{r analysis}
+sum_sq <- function(df, measure) {
+  df %>% summarise(ss = sum(({{measure}} - mean({{measure}}))^2))
+}
+
+sum_sq(chaff2, mass)
+
+# adapt to calculate SS(x) for each group
+sum_sq <- function(df, measure, group) {
+  df %>% group_by({{ group }}) %>% 
+    summarise(ss = sum(({{measure}} - mean({{measure}}))^2))
+}
+
+sum_sq(chaff2, mass, sex)
+```
+
 ### Results 
-The difference in masses between sex 
+The difference in masses between sex. The *SS(x)* values for **females** is **86.8320**, whilst for **males** it is **87.8975**.
+
 #### Discussion 
