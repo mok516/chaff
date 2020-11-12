@@ -3,6 +3,7 @@ title: "main."
 author: "Molly K"
 date: "04/11/2020"
 output: "html_document"
+bibliography: "reference.bib"
 ---
 <!-- Setup, FALSE for these 3 so code doesn't show up in document -->
 ```{r setup, include=FALSE}
@@ -22,7 +23,7 @@ library(tidyverse)
 Working with the **chaff** data set, this data records the masses of male and female chaffinches.  
 
 ## Methods
-Use R analysis to calculate the **sum of squares** from the **mass** values. 
+Use R analysis within rmarkdown [@markdown] to calculate the **sum of squares** from the **mass** values. 
 
 ```{r data}
 # read in chaff data
