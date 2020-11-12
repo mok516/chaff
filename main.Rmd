@@ -2,7 +2,10 @@
 title: "main."
 author: "Molly K"
 date: "04/11/2020"
-output: "html_document"
+output: 
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+  bookdown::pdf_document2: default
 bibliography: "reference.bib"
 ---
 <!-- Setup, FALSE for these 3 so code doesn't show up in document -->
@@ -21,8 +24,18 @@ library(tidyverse)
 
 # Introduction 
 In this review I will be looking into data collected concerning **chaffinches**. Chaffinches are a member of the Finch family often recognizable by the coloring of their plumage or loud song [@rspb].  
-The data set used for this analysis (called chaff) has recorded the **masses** of both male and female chaffinches. 
+The data set used for this analysis (called chaff) has recorded the **masses** of both male and female chaffinches, see Figures \@ref(fig:malechaff-fig), and  \@ref(fig:chafffem-fig).  
 Working with the **chaff** data set, this data records the masses of male and female chaffinches. Before beginning this analysis I *hypothesized* that the **males** would be **heavier** than the females. Previous studies of chaffinches have displayed that the male birds tend to have a higher average weight [@chaffbiomet].  
+<!-- insert pics -->
+
+```{r malechaff-fig, out.width="30%", fig.cap = "Male Chaffinches have a recognisable red plumage, Picture from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
+knitr::include_graphics("../chaff/chaffmale.jpg")
+```
+<!-- insert next pic -->
+
+```{r chafffem-fig, out.width="30%", fig.cap= "Female Chaffinches have a brown plumage unlike the males, Picture from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
+knitr::include_graphics("../chaff/chaff_female.jpg")
+```
 
 ## Methods
 Use R analysis within *Rmarkdown* [@markdown] to calculate the **sum of squares** from the **mass** values. 
@@ -59,7 +72,7 @@ sum_sq <- function(df, measure, group) {
 
 sum_sq(chaff2, mass, sex)
 ```
-<!-- summarise by sex - include the mean, standard deviation, sample size and standard error -->
+<!-- summarize by sex - include the mean, standard deviation, sample size and standard error -->
 ```{r summarise}
 chaff_summary <- chaff2 %>%
   group_by(sex) %>%
