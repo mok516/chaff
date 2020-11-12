@@ -20,7 +20,7 @@ library(tidyverse)
 ```
 
 # Introduction 
-Working with the **chaff** data set, this data records the masses of male and female chaffinches.  
+Working with the **chaff** data set, this data records the masses of male and female chaffinches. Before beginning this analysis I hypothesized that the males would be heavier than the females. Previous studies of chaffinches have displayed that the male birds tend to have a higher average weight [@chaffbiomet].  
 
 ## Methods
 Use R analysis within rmarkdown [@markdown] to calculate the **sum of squares** from the **mass** values. 
