@@ -24,16 +24,16 @@ library(tidyverse)
 
 # Introduction 
 In this review I will be looking into data collected concerning **chaffinches**. Chaffinches are a member of the Finch family often recognizable by the coloring of their plumage or loud song [@rspb].  
-The data set used for this analysis (called chaff) has recorded the **masses** of both male and female chaffinches, see Figures \@ref(fig:malechaff-fig), and  \@ref(fig:chafffem-fig).  
+The data set used for this analysis (called chaff) has recorded the **masses** of both male and female chaffinches, see Figures\@ref(fig:malechaff-fig), and  \@ref(fig:chafffem-fig).  
 Working with the **chaff** data set, this data records the masses of male and female chaffinches. Before beginning this analysis I *hypothesized* that the **males** would be **heavier** than the females. Previous studies of chaffinches have displayed that the male birds tend to have a higher average weight [@chaffbiomet].  
 <!-- insert pics -->
 
-```{r malechaff-fig, out.width="30%", fig.cap = "Male Chaffinches have a recognisable red plumage, Picture from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
+```{r malechaff-fig, out.width="30%", fig.cap = "Male Chaffinches have a recognisable red plumage, Photo from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
 knitr::include_graphics("../chaff/chaffmale.jpg")
 ```
 <!-- insert next pic -->
 
-```{r chafffem-fig, out.width="30%", fig.cap= "Female Chaffinches have a brown plumage unlike the males, Picture from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
+```{r chafffem-fig, out.width="30%", fig.cap= "Female Chaffinches have a borwn plumage unlike the males, Photo from Wikipedia, Common Chaffinch, https://en.wikipedia.org/wiki/Common_chaffinch"}
 knitr::include_graphics("../chaff/chaff_female.jpg")
 ```
 
@@ -96,9 +96,9 @@ chaff_summary <- function(summarise) {{chaff2 %>%
 
 
 ### Results 
-The difference in masses between sex. The *SS(x)* values for **females** is , whilst for **males** it is.
-Summary of data shows a **mean** of  for **females** and for **males**. With **males** having a *Standard deviation* of   and a *Standard error* of . 
-For females the results were, a *Standard deviation* of  and a *Standard error* of .
+
+Summary of data shows a **mean** of 20.480 for **females** and for **males** 22.275 . With **males** having a *Standard deviation* of 2.151 and a *Standard error* of 0.481. 
+For females the results were, a *Standard deviation* of 2.138 and a *Standard error* of 0.478.
 
 #### Discussion 
 **Male** chaffinches appear to be *heavier* than **Females** from this data, having a *higher* mean **mass**. Despite having *slightly higher* standard deviations and standard errors the results are conclusive.
